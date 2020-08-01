@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 #Mở file vd.csv để đọc
-f = open("data/vd.csv", "r")
+f = open("data/vd.csv", "r", encoding='UTF8')
 #Tạo hai list rỗng
 heads=[]
 tails=[]

@@ -1,6 +1,6 @@
 import numpy as np
 
-f = open("data/vd.csv", "r")
+f = open("data/vd.csv", "r", encoding='UTF8')
 # Đọc từng dòng của file f
 for line in f:
     #strip():bo ky tu xuong dong
