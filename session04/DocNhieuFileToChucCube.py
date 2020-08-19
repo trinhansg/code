@@ -23,6 +23,7 @@ def readfilecsv(filename):
     return DongTieuDe,DongChiTiet
 
 
+companies = ['ads','aav','aam']
 
 DongTieuDe1,DongChiTiet1=readfilecsv('data/kqdq_ads.csv')
 DongTieuDe2,DongChiTiet2=readfilecsv('data/kqdq_aav.csv')
@@ -65,7 +66,7 @@ print(f"ROS: {float(Cube[2][48][1])/float(Cube[2][33][1]):,.6f}")
 ros = float(Cube[2][48][1])/float(Cube[2][33][1])
 print(f"AAM,{roa},{ros}")
 
-companies = ['ads','aav','aam']
+
 
 f = open("data/data.csv", "w", encoding='utf8')
 for i in range(len(companies)):
