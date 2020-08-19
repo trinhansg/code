@@ -66,13 +66,20 @@ print(f"ROS: {float(Cube[2][48][1])/float(Cube[2][33][1]):,.6f}")
 ros = float(Cube[2][48][1])/float(Cube[2][33][1])
 print(f"AAM,{roa},{ros}")
 
+print(f"f3: {float(Cube[2][0][1])/float(Cube[2][18][1]):,.6f}")
+print(f"f4: {float(Cube[2][17][1])/float(Cube[2][22][1]):,.6f}")
+print(f"ROE: {float(Cube[2][48][1])/float(Cube[2][22][1]):,.6f}")
+
 
 
 f = open("data/data.csv", "w", encoding='utf8')
 for i in range(len(companies)):
     roa = float(Cube[i][48][1]) / float(Cube[i][16][1])
     ros = float(Cube[i][48][1]) / float(Cube[i][33][1])
-    print(f"{companies[i]},{roa},{ros}\n")
-    f.write(f"{companies[i]},{roa},{ros}\n")
+    f3 = float(Cube[i][0][1]) / float(Cube[i][18][1])
+    f4 = float(Cube[i][17][1]) / float(Cube[i][22][1])
+    f5 = float(Cube[i][48][1]) / float(Cube[i][22][1])
+    print(f"{companies[i]},{roa},{ros},{f3},{f4},{f5}\n")
+    f.write(f"{companies[i]},{roa:,.4f},{ros:,.4f},{f3:,.4f},{f4:,.4f},{f5:,.4f}\n")
 f.close()
 
